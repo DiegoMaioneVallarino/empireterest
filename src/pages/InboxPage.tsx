@@ -1,0 +1,1 @@
+import {Smartphone} from 'lucide-react';export default function InboxPage(){return <div className="placeholder"><Smartphone size={40}/><h1>Bandeja de Android</h1><p>Las capturas enviadas desde tu app aparecerán aquí cuando conectemos el backend.</p></div>}

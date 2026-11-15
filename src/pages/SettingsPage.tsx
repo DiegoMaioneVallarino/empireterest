@@ -1,0 +1,1 @@
+export default function SettingsPage(){return <div className="page-heading"><h1>Ajustes</h1><p>Empireterest v0.1 · Frontend local en React + TypeScript</p><p>API prevista: {import.meta.env.VITE_API_URL||'http://localhost:3001/api'}</p></div>}

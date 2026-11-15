@@ -1,0 +1,2 @@
+import PinGrid from '../components/pins/PinGrid';import {usePins} from '../hooks/usePins';import {useUIStore} from '../store/uiStore';
+export default function SearchPage(){const q=useUIStore(s=>s.search).trim().toLowerCase();const pins=usePins().filter(p=>[p.title,p.description,...p.tags].some(v=>v.toLowerCase().includes(q)));return <><div className="page-heading"><h1>Buscar</h1><p>{q?`Resultados para “${q}”`:'Explora tu biblioteca'}</p></div><PinGrid pins={pins}/></>}

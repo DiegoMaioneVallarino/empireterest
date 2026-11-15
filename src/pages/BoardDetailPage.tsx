@@ -1,0 +1,2 @@
+import {useParams,Link} from 'react-router-dom';import {useBoards} from '../hooks/useBoards';import {usePins} from '../hooks/usePins';import PinGrid from '../components/pins/PinGrid';
+export default function BoardDetailPage(){const {id}=useParams();const board=useBoards().find(b=>b.id===id);const pins=usePins().filter(p=>board?.pinIds.includes(p.id));return board?<><div className="page-heading"><h1>{board.name}</h1><p>{pins.length} imágenes guardadas</p></div><PinGrid pins={pins}/></>:<p>Tablero no encontrado. <Link to="/boards">Volver</Link></p>}
